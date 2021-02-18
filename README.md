@@ -32,3 +32,8 @@ Welcome to Hoffi Coffi, thats '**Love Coffee**' in the **Welsh language**. The a
 1. **Logo** 
 The logo was created using [Free Logo Maker](https://logomakr.com). It was designed to to show the love for coffee that can be shared by two people. The coffee beans are used in place of a heart and colored red to symbolise this. This logo can be seen at the top of this page. 
 
+2. **Colour Scheme**
+
+The colours for the website were chosen using [Coolors](https://coolors.co/fdecfb-a97160-dfbe99). They were chosen with the aim to represent coffee and the love that goes into it. The chosen colours are:
+
+* ![#FDECFB](https://placehold.it/15/FDECFB/000000?text=+) '#FDECFB' - Pale Purple Pantone. 
