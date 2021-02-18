@@ -39,3 +39,7 @@ The colours for the website were chosen using [Coolors](https://coolors.co/fdecf
 * ![#FDECFB](https://placehold.it/15/FDECFB/000000?text=+) '#FDECFB' - Pale Purple Pantone
 * ![#A97160](https://placehold.it/15/A97160/000000?text=+) '#A97160' - Blast of Bronze
 * ![#DFBE99](https://placehold.it/15/DFBE99/000000?text=+) '#DFBE99' - Tan
+
+3. **Fonts**
+
+The website has the main font of Roboto Slab, which was chosen due to it **readability to all users**. Furthermore, it modern which will fit with the aim of the website. It was chosen using [Google Fonts](https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap) and has the default of Sans Serif. 
