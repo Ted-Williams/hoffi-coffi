@@ -25,3 +25,10 @@ Welcome to Hoffi Coffi, thats '**Love Coffee**' in the **Welsh language**. The a
 * As a developer, I want to be able to create a usable app. 
 
 * As a developer, I want to be able to increase the passion for coffee. 
+
+
+### Design 
+
+1. **Logo** 
+The logo was created using [Free Logo Maker](https://logomakr.com). It was designed to to show the love for coffee that can be shared by two people. The coffee beans are used in place of a heart and colored red to symbolise this. This logo can be seen at the top of this page. 
+
