@@ -36,4 +36,6 @@ The logo was created using [Free Logo Maker](https://logomakr.com). It was desig
 
 The colours for the website were chosen using [Coolors](https://coolors.co/fdecfb-a97160-dfbe99). They were chosen with the aim to represent coffee and the love that goes into it. The chosen colours are:
 
-* ![#FDECFB](https://placehold.it/15/FDECFB/000000?text=+) '#FDECFB' - Pale Purple Pantone. 
+* ![#FDECFB](https://placehold.it/15/FDECFB/000000?text=+) '#FDECFB' - Pale Purple Pantone
+* ![#A97160](https://placehold.it/15/A97160/000000?text=+) '#A97160' - Blast of Bronze
+* ![#DFBE99](https://placehold.it/15/DFBE99/000000?text=+) '#DFBE99' - Tan
