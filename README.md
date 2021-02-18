@@ -20,3 +20,8 @@ Welcome to Hoffi Coffi, thats '**Love Coffee**' in the **Welsh language**. The a
 
 * As a user, I want to be able to **create an account** so that I can keep a track record of my favourite coffees. 
 
+*Developers Goals* 
+
+* As a developer, I want to be able to create a usable app. 
+
+* As a developer, I want to be able to increase the passion for coffee. 
