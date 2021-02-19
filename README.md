@@ -63,3 +63,5 @@ The features that were added to the project were designed to have a high level o
 * The **Navbar** will have links to home, coffee, contact and sign in which will allow the user to easily navigate around the page. It will also be a sticky navbar to help users navigate when they are scrolling through the page.
 * The **hamburger menu** will be used on mobile phone to allow the user to navigate their way around the website easily without overcrowding the screen. 
 * The *home page* will incorporate a landing image of coffee with a the option for the user to sign up to the website. There will also be a welcome message to the website. 
+* The *coffee page* will allow users to view a variety of coffees. It will display their names and a short description below a picture of each. 
+* *Favourite* The user will be able to favourite any coffee they wish to, once they have created an account. 
