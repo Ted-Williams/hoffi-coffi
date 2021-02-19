@@ -49,3 +49,4 @@ The website has the main font of Roboto Slab, which was chosen due to it **reada
 The wireframes for this website where created using [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjwltH3BRB6EiwAhj0IUBrAHe-2BiRjQmQGSO-FZIjoEjkckL_kVyJXd5ShGVwKqDaDMqKjvBoCQksQAvD_BwE)
 
 ![](wireframes/desktop.png)
+![](wireframes/tablet.png)
