@@ -71,3 +71,4 @@ The features that were added to the project were designed to have a high level o
 
 ### Features Left to Implement
 
+* The option for users to **buy the coffee** that they like through the website.
