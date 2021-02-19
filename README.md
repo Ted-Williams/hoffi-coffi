@@ -51,3 +51,13 @@ The wireframes for this website where created using [Balsamiq](https://balsamiq.
 ![](wireframes/desktop.png)
 ![](wireframes/tablet.png)
 ![](wireframes/phone.png)
+
+## Features
+---
+
+### Existing Features
+
+The features that were added to the project were designed to have a high level of usability.
+
+* The **logo** will be wrapped in anchor tags which will allow the user to click on it to return to the home page. 
+* The **Navbar** will have links to home, coffee, contact and sign in which will allow the user to easily navigate around the page. It will also be a sticky navbar to help users navigate when they are scrolling through the page.
