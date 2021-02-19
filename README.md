@@ -87,3 +87,7 @@ The features that were added to the project were designed to have a high level o
 * Python 
 
 ## **Frameworks and Libraries**
+
+* [Bootstrap](https://getbootstrap.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [Google Fonts](https://fonts.google.com/specimen/Lato?sidebar.open&selection.family=Lato)
