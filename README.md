@@ -100,3 +100,6 @@ The features that were added to the project were designed to have a high level o
 * [Gitpod Online IDE](https://www.gitpod.io/)
 * [Github](https://github.com/)
 * [Favicon Creator](https://www.favicon.cc/?action=import_request)
+
+## Testing
+---
