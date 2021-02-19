@@ -67,3 +67,4 @@ The features that were added to the project were designed to have a high level o
 * *Favourite* The user will be able to favourite any coffee they wish to, once they have created an account. 
 * The *sign up* page will allow the users to create an account. This will allow them to keep track of the coffees that they like.
 * The *contact form* allows the user to get in contact with any questions that they may have. 
+* The *footer* will allow the user to naviagte to other pages with a menu and will show the hoffi coffi logo. 
