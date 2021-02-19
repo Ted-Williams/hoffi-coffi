@@ -73,3 +73,7 @@ The features that were added to the project were designed to have a high level o
 
 * The option for users to **buy the coffee** that they like through the website.
 * For users to be able to add thier **own choices** on the website. 
+
+## Technologies Used
+---
+### **Languages:**
