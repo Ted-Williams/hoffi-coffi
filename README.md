@@ -77,3 +77,11 @@ The features that were added to the project were designed to have a high level o
 ## Technologies Used
 ---
 ### **Languages:**
+
+### **Languages:**
+
+* HTML
+* CSS
+* JavaScript
+* JSON
+* Python 
