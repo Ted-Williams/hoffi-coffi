@@ -107,3 +107,6 @@ The features that were added to the project were designed to have a high level o
 ## Deployment 
 ---
 
+## Credits
+---
+
