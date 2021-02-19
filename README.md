@@ -94,3 +94,6 @@ The features that were added to the project were designed to have a high level o
 
 ### **Tools Used**
 
+* [Coolors](https://coolors.co/3c1642-086375-1dd3b0-fffdfd-ffffff) 
+* [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjwltH3BRB6EiwAhj0IUBrAHe-2BiRjQmQGSO-FZIjoEjkckL_kVyJXd5ShGVwKqDaDMqKjvBoCQksQAvD_BwE)
+* [Free Logo Maker](https://logomakr.com)
