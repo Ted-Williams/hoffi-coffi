@@ -50,3 +50,4 @@ The wireframes for this website where created using [Balsamiq](https://balsamiq.
 
 ![](wireframes/desktop.png)
 ![](wireframes/tablet.png)
+![](wireframes/phone.png)
