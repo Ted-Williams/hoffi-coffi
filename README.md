@@ -110,3 +110,10 @@ The features that were added to the project were designed to have a high level o
 ## Credits
 ---
 
+
+
+
+
+
+***This project is fictitous and was created for educational purposes as part of the Code Institute Milestone Project 3***
+
