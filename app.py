@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import (Flask, render_template)
 if os.path.exists("env.py"):
     import env
 
@@ -7,8 +7,8 @@ if os.path.exists("env.py"):
 app = Flask (__name__)
 
 @app.route("/")
-def hello():
-    return "Hello World"
+def homepage():
+    return render_template('pages/navbar.html')
 
 
 if __name__ == "__main__":
