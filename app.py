@@ -24,7 +24,7 @@ def homepage():
     Function which takes the user to the 
     homepage when the app loads
     """
-    return render_template('pages/homepage.html')
+    return render_template('pages/homepage.html', homepage=homepage)
 
 
 @app.route("/login", methods=["GET", "POST"])
