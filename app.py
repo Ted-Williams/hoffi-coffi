@@ -36,6 +36,10 @@ def log_in():
     return render_template('pages/login.html')
 
 
+@app.route("/logout")
+def logout():
+    return render_template('pages/homepage.html')
+
 @app.route("/admin/<user_id>")
 def admin():
     return render_template('pages/admin.html')
