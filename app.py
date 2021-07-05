@@ -27,7 +27,7 @@ def homepage():
     return render_template('pages/homepage.html')
 
 
-app.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def log_in():
     """
     This allows the user to log in to
@@ -42,6 +42,7 @@ def logout():
     Retuns the user back to the hompage when logged
     out
     """
+    session.clear()
     return render_template('pages/homepage.html')
 
 @app.route("/admin/<user_id>")
