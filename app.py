@@ -26,12 +26,25 @@ def homepage():
     """
     return render_template('pages/homepage.html')
 
+
 app.route("/login", methods=["GET", "POST"])
 def log_in():
     """
     This allows the user to log in to
     the app using their username and password
     """
+    return render_template('pages/login.html')
+
+
+@app.route("/admin/<user_id>")
+def admin():
+    return render_template('pages/admin.html')
+
+
+@app.route("/coffee")
+def coffee():
+    return render_template('pages/coffee.html')
+
 
 
 if __name__ == "__main__":
