@@ -38,15 +38,26 @@ def log_in():
 
 @app.route("/logout")
 def logout():
+    """
+    Retuns the user back to the hompage when logged
+    out
+    """
     return render_template('pages/homepage.html')
 
 @app.route("/admin/<user_id>")
 def admin():
+    """
+    Shows the user that they are logged in 
+    and are able to add/delete a coffee
+    """
     return render_template('pages/admin.html')
 
 
 @app.route("/coffee")
 def coffee():
+    """
+    shows the static coffee page to all users
+    """
     return render_template('pages/coffee.html')
 
 
