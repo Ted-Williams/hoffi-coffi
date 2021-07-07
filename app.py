@@ -35,10 +35,18 @@ def log_in():
     This allows the user to log in to
     the app using their username and password
     """
-    users = mongo.db.users
-    login_user = users.find_one({'name' : request.form['login']})
+    if request.method == "POST":
+        users = mongo.db.users.find_one(
+            {'name' : request.form.get['login']})
 
-    if login_user:
+        if user:
+            if check_password_hash(users["password"],
+            request.form.get("password")):
+
+
+        else:
+            flash("Incorrect username and/or password")
+            return redirect(url_for('login'))
 
     return render_template('pages/login.html')
 
