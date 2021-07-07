@@ -1,7 +1,7 @@
 {% extends 'layout/base.html' %}
 
 {% block content %}
-<form>
+<form method="POST" action="{{ url_for('login')}}">
     <input type="text" id="login"  name="login" placeholder="login">
     <input type="text" id="password" name="login" placeholder="password">
     <input type="submit" value="Log In">

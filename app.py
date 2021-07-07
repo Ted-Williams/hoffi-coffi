@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -18,6 +19,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+
 @app.route("/")
 def homepage():
     """
@@ -25,7 +27,7 @@ def homepage():
     homepage when the app loads
     """
     return render_template('pages/homepage.html', homepage=homepage)
-
+    
 
 @app.route("/login", methods=["GET", "POST"])
 def log_in():
@@ -33,6 +35,11 @@ def log_in():
     This allows the user to log in to
     the app using their username and password
     """
+    users = mongo.db.users
+    login_user = users.find_one({'name' : request.form['login']})
+
+    if login_user:
+
     return render_template('pages/login.html')
 
 
@@ -60,7 +67,6 @@ def coffee():
     shows the static coffee page to all users
     """
     return render_template('pages/coffee.html')
-
 
 
 if __name__ == "__main__":
