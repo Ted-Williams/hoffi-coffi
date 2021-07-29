@@ -28,32 +28,36 @@ def homepage():
     """
     return render_template('pages/homepage.html', homepage=homepage)
     
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
     This allows the user to log in to
     the app using their username and password
     """
+    
     if request.method == "POST":
-        users = mongo.db.users.find_one(
-            {'name' : request.form.get['login']})
-
+        user = mongo.db.users.find_one(
+            {'email' : request.form.get('email')})
         if user:
-            if check_password_hash(users["password"],
-            request.form.get("password")):
+            #if check_password_hash(user["password"],
+            #request.form.get("password")):
+            if user['password'] == request.form.get('password'):
+                session["users"] = request.form.get("email").lower()
+                flash("Welcome, {}".format(
+                            request.form.get("email")))
+                return redirect(url_for(
+                            "homepage", username=session["users"]))
             
 
         else:
-            flash("Incorrect username and/or password")
+            print("Incorrect username and/or password")
             return redirect(url_for('login'))
 
-        else:
+    else:
             flash("Incorrect username and/or password")
-            return redirect(url_for('login'))
+            #return redirect(url_for('logo'))
 
     return render_template('pages/login.html')
-
 
 @app.route("/logout")
 def logout():
@@ -79,6 +83,11 @@ def coffee():
     shows the static coffee page to all users
     """
     return render_template('pages/coffee.html')
+
+@app.route("/forward")
+def move_forward():
+    print("Moving Forward...")
+    return render_template('pages/homepage.html')
 
 
 if __name__ == "__main__":
