@@ -1,4 +1,22 @@
+{% extends 'components/navigation>.html' %}
 
-
+{% block content %}
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light ml-auto">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Hoffi Coffi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link" href="coffee.html">Coffee</a>
+        <a class="nav-link" href="login.html">Login</a>
+      </div>
+    </div>
+  </div>
+</nav>
+{% endblock %}
 
   
