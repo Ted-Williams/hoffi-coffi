@@ -30,7 +30,7 @@ def homepage():
     
 
 @app.route("/login", methods=["GET", "POST"])
-def log_in():
+def login():
     """
     This allows the user to log in to
     the app using their username and password
@@ -42,7 +42,11 @@ def log_in():
         if user:
             if check_password_hash(users["password"],
             request.form.get("password")):
+            
 
+        else:
+            flash("Incorrect username and/or password")
+            return redirect(url_for('login'))
 
         else:
             flash("Incorrect username and/or password")
