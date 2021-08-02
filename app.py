@@ -77,9 +77,9 @@ def admin(user_id):
     """
     if request.method == "GET":
         coffeeList = mongo.db.coffee.find({})
-        formattedCoffeeList = json.dumps(list(coffeeList))
-        formattedCoffeeList = coffeeList.map(lambda item: item['_id']=str(item['_id']), coffeeList)
-        print(formattedCoffeeList) 
+        #formattedCoffeeList = json.dumps(list(coffeeList))
+        formattedCoffeeList = map(lambda item: str(item['_id']), list(coffeeList))
+        print(json.dumps(list(formattedCoffeeList))) 
     return render_template('pages/admin.html', coffeeList=formattedCoffeeList)
 
 @app.route("/admin/select-coffee", methods=["GET", "POST"])
