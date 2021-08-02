@@ -77,10 +77,14 @@ def admin(user_id):
     """
     if request.method == "GET":
         coffeeList = mongo.db.coffee.find({})
+        formattedCoffeeList = []
+        for coffee in list(coffeeList):
+            coffee['_id'] = str(coffee['_id'])
+            formattedCoffeeList.append(coffee)
         #formattedCoffeeList = json.dumps(list(coffeeList))
-        formattedCoffeeList = map(lambda item: str(item['_id']), list(coffeeList))
-        print(json.dumps(list(formattedCoffeeList))) 
-    return render_template('pages/admin.html', coffeeList=formattedCoffeeList)
+        #formattedCoffeeList = map(lambda item: str(item['_id']), list(coffeeList))
+        print(list(formattedCoffeeList))
+    return render_template('pages/admin.html', coffeeList=list(formattedCoffeeList))
 
 @app.route("/admin/select-coffee", methods=["GET", "POST"])
 def onSelectCoffee(event):
