@@ -1,4 +1,5 @@
-import os
+import os 
+import json
 from flask import (
     Flask, flash, render_template, 
     redirect, request, session, url_for)
@@ -46,7 +47,7 @@ def login():
                 flash("Welcome, {}".format(
                             request.form.get("email")))
                 return redirect(url_for(
-                            "homepage", username=session["users"]))
+                            "admin", user_id=user["_id"]))
             
 
         else:
@@ -68,16 +69,24 @@ def logout():
     session.clear()
     return render_template('pages/homepage.html')
 
-@app.route("/admin/<user_id>")
-def admin():
+@app.route("/admin/<user_id>", methods=["GET", "POST"])
+def admin(user_id):
     """
     Shows the user that they are logged in 
     and are able to add/delete a coffee
     """
-    return render_template('pages/admin.html')
+    if request.method == "GET":
+        coffeeList = mongo.db.coffee.find({})
+        formattedCoffeeList = json.dumps(list(coffeeList))
+        formattedCoffeeList = coffeeList.map(lambda item: item['_id']=str(item['_id']), coffeeList)
+        print(formattedCoffeeList) 
+    return render_template('pages/admin.html', coffeeList=formattedCoffeeList)
 
-
-@app.route("/coffee")
+@app.route("/admin/select-coffee", methods=["GET", "POST"])
+def onSelectCoffee(event):
+    session['selectedCoffee'] = request.form.get('coffeeControl')
+    print(session['selectedCoffee'].product_name)
+@app.route("/edit/coffee")
 def coffee():
     """
     shows the static coffee page to all users
