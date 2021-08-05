@@ -27,7 +27,7 @@ def homepage():
     Function which takes the user to the 
     homepage when the app loads
     """
-    return render_template('pages/homepage.html', homepage=homepage)
+    return render_template('pages/homepage.html', homepage=homepage, loggedOut=1)
     
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -37,26 +37,22 @@ def login():
     """
     
     if request.method == "POST":
-        user = mongo.db.users.find_one(
-            {'email' : request.form.get('email')})
+        user = mongo.db.users.find_one({'email' : request.form.get('email')})
         if user:
             #if check_password_hash(user["password"],
-                #request.form.get("password")):
+            #request.form.get("password")):
             if user['password'] == request.form.get('password'):
                 session["users"] = request.form.get("email").lower()
-                flash("Welcome, {}".format(
-                            request.form.get("email")))
-                return redirect(url_for(
-                            "admin", user_id=user["_id"]))
-            
+                flash("Welcome, {}".format(request.form.get("email")))
+                return redirect(url_for("admin", user_id=user["_id"]))
 
         else:
             print("Incorrect username and/or password")
             return redirect(url_for('login'))
 
     else:
-            flash("Incorrect username and/or password")
-            #return redirect(url_for('logo'))
+        flash("Incorrect username and/or password")
+        #return redirect(url_for('logo'))
 
     return render_template('pages/login.html')
 
@@ -75,21 +71,27 @@ def admin(user_id):
     Shows the user that they are logged in 
     and are able to add/delete a coffee
     """
+    coffeeList = mongo.db.coffee.find({})
+    formattedCoffeeList = []
+    for coffee in list(coffeeList):
+        coffee['_id'] = str(coffee['_id'])
+        formattedCoffeeList.append(coffee)
     if request.method == "GET":
-        coffeeList = mongo.db.coffee.find({})
-        formattedCoffeeList = []
-        for coffee in list(coffeeList):
-            coffee['_id'] = str(coffee['_id'])
-            formattedCoffeeList.append(coffee)
-        #formattedCoffeeList = json.dumps(list(coffeeList))
-        #formattedCoffeeList = map(lambda item: str(item['_id']), list(coffeeList))
-        print(list(formattedCoffeeList))
-    return render_template('pages/admin.html', coffeeList=list(formattedCoffeeList))
+        return render_template('pages/admin.html', coffeeList=list(formattedCoffeeList), loggedIn=1)
+    else:
+        coffee_id = request.form.get('coffeeControl')
+        return redirect(url_for("adminEditCoffee", user_id=user_id, coffee_id=coffee_id))
 
-@app.route("/admin/select-coffee", methods=["GET", "POST"])
-def onSelectCoffee(event):
-    session['selectedCoffee'] = request.form.get('coffeeControl')
-    print(session['selectedCoffee'].product_name)
+@app.route("/admin/<user_id>/<coffee_id>", methods=["GET", "POST"])
+def adminEditCoffee(user_id, coffee_id):
+    """
+    Shows the user that they are logged in 
+    and are able to add/delete a coffee
+    """
+    if request.method == "GET":
+        coffee = mongo.db.coffee.find_one({"_id": ObjectId(coffee_id)})
+    return render_template('pages/admin-edit.html', coffee=coffee, loggedIn=1)
+
 @app.route("/edit/coffee")
 def coffee():
     """
