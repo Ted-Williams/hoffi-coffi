@@ -41,7 +41,7 @@ def login():
             {'email' : request.form.get('email')})
         if user:
             #if check_password_hash(user["password"],
-            #request.form.get("password")):
+                #request.form.get("password")):
             if user['password'] == request.form.get('password'):
                 session["users"] = request.form.get("email").lower()
                 flash("Welcome, {}".format(
