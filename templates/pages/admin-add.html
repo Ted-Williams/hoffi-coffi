@@ -1,0 +1,50 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+{% include 'components/navigation.html' %}
+<div class="container">
+  <h2 class="mt-4">Admin Panel</h2>
+
+  {% if missingName == 1 %}
+  <div class="alert alert-success alert-dismissible" role="deletedAlert" id="deletedAlert">
+    <strong>You must input a coffee name!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="deletedAlert" aria-label="Close"></button>
+  </div>
+  {% endif %}
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <form class="row g-3" method="POST" action="{{url_for('adminAddCoffee', user_id=user_id)}}" id="addForm">
+        <div class="col-12">
+          <input type="text" class="form-control" placeholder="Coffee Name" aria-label="Name" name="coffeeName" value="">
+        </div>
+        <div class="col-12">
+          <input type="text" class="form-control" placeholder="Origin" aria-label="Origin" name="origin" value="">
+        </div>
+        <div class="col-12">
+          <input type="text" class="form-control" placeholder="Taste" aria-label="Taste" name="taste" value="">
+        </div>
+        <div class="col-12">
+          <input type="text" class="form-control" placeholder="Image URL" aria-label="Image URL" name="image_url" value="">
+        </div>
+        <div class="col-12">
+          <div class="input-group">
+            <span class="input-group-text" id="price-addon">£</span>
+            <input type="text" class="form-control" placeholder="Price" aria-label="Price" aria-describedby="price-addon" name="price" value="">
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-sm-flex justify-content-between">
+          <div>
+            <a href="{{url_for('admin', user_id=user_id)}}">
+              <button type="button" class="btn btn-light">Back</button>
+            </a>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-success">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

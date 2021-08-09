@@ -4,9 +4,23 @@
 {% include 'components/navigation.html' %}
 <div class="container">
   <h2 class="mt-4">Admin Panel</h2>
+
+  {% if updated == 1 %}
+  <div class="alert alert-success alert-dismissible" role="alert" id="updatedAlert">
+    <strong>Success!</strong> Coffee updated.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% elif updated == 0 %}
+  <div class="alert alert-danger alert-dismissible" role="alert" id="updatedAlert">
+    <strong>Oops!</strong> Failed to update.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endif %}
+
+  {% if coffee %}
   <div class="card mt-4">
     <div class="card-body">
-      <form class="row g-3">
+      <form class="row g-3" method="POST" action="{{url_for('adminUpdateCoffee', user_id=user_id, coffee_id=coffee._id)}}">
         <div class="col-12">
           <input type="text" class="form-control" placeholder="Coffee Name" aria-label="Name" name="coffeeName" value="{{coffee.product_name}}">
         </div>
@@ -17,16 +31,36 @@
           <input type="text" class="form-control" placeholder="Taste" aria-label="Taste" name="taste" value="{{coffee.taste}}">
         </div>
         <div class="col-12">
+          <input type="text" class="form-control" placeholder="Image URL" aria-label="Image URL" name="image_url" value="{{coffee.image_url}}">
+        </div>
+        <div class="col-12">
           <div class="input-group">
             <span class="input-group-text" id="price-addon">£</span>
             <input type="text" class="form-control" placeholder="Price" aria-label="Price" aria-describedby="price-addon" name="price" value="{{coffee.price}}">
           </div>
         </div>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
-          <button type="submit" class="btn btn-success">Update</button>
+        <div class="d-grid gap-2 d-sm-flex justify-content-between">
+          <div>
+            <a href="{{url_for('admin', user_id=user_id)}}">
+              <button type="button" class="btn btn-light">Back</button>
+            </a>
+          </div>
+          <div>
+            <a href="{{url_for('adminDeleteCoffee', user_id=user_id, coffee_id=coffee._id)}}" style="text-decoration: none;">
+              <button type="button" class="btn btn-danger">Delete</button>
+            </a>
+            <button type="submit" class="btn btn-success">Update</button>
+          </div>
         </div>
       </form>
     </div>
   </div>
+  {% else %}
+  <div class="d-grid gap-2 d-sm-flex justify-content-between">
+    <a href="{{url_for('admin', user_id=user_id)}}">
+      <button type="button" class="btn btn-light">Back</button>
+    </a>
+  </div>
+  {% endif %}
 </div>
 {% endblock %}

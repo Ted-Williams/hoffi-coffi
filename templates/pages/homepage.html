@@ -21,48 +21,26 @@
 <!--Coffee Selection-->
 <div class="container">
   <div class="row g-5">
+    {% for coffee in coffeeList %}
     <div class="col-lg-4 col-md-6">
       <div class="card coffee-card">
-        <img src="static/images/indonesian-sumatra.jpg" class="card-img-top" alt="...">
+        {% if coffee.image_url %}
+        <img src="{{coffee.image_url}}" class="card-img-top" alt="{{coffee.product_name}}">
+        {% else %}
+        <img src="static/images/indonesian-sumatra.jpg" class="card-img-top" alt="Coffee Image">
+        {% endif %}
         <div class="card-body">
-          <h5 class="card-title">Indonesian-sumatra</h5>
+          <h5 class="card-title">{{coffee.product_name}}</h5>
           <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Orgin - </li>
-          <li class="list-group-item">Taste - </li>
-          <li class="list-group-item">Price</li>
+          <li class="list-group-item">Orgin - {{coffee.origin}}</li>
+          <li class="list-group-item">Taste - {{coffee.taste}}</li>
+          <li class="list-group-item">Price - £{{coffee.price}}</li>
         </ul>
       </div>
     </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card coffee-card">
-        <img src="static/images/indonesian-sumatra.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Tanzania Peaberry Coffee</h5>
-          <p class="card-text"></p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Orgin - </li>
-          <li class="list-group-item">Taste - </li>
-          <li class="list-group-item">Price</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card coffee-card">
-        <img src="static/images/indonesian-sumatra.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Hawaii Kona Coffee</h5>
-          <p class="card-text"></p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Orgin - </li>
-          <li class="list-group-item">Taste - </li>
-          <li class="list-group-item">Price</li>
-        </ul>
-      </div>
-    </div>
+    {% endfor %}
   </div>
   <div class="card mt-5" style="width: 640px; max-width: 100%; margin: auto;">
     <h5 class="card-header">Contact Us</h5>
