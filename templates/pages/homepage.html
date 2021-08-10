@@ -45,25 +45,26 @@
   <div class="card mt-5" style="width: 640px; max-width: 100%; margin: auto;">
     <h5 class="card-header">Contact Us</h5>
     <div class="card-body">
-      <form class="row g-3">
+      <form class="row g-3" id="contactForm">
         <div class="col-12">
-          <input type="text" class="form-control" placeholder="Name" aria-label="Name" name="fullName">
+          <input type="text" class="form-control" placeholder="Name" aria-label="Name" name="user_name" id="user_name">
         </div>
         <div class="col-12">
-          <input type="text" class="form-control" placeholder="Email" aria-label="Email" name="email">
+          <input type="text" class="form-control" placeholder="Email" aria-label="Email" name="user_email " id="user_email">
         </div>
         <div class="col-12">
-          <input type="text" class="form-control" placeholder="Phone" aria-label="Phone" name="phone">
+          <input type="text" class="form-control" placeholder="Phone" aria-label="Phone" name="user_phone" id="user_phone">
         </div>
         <div class="col-12">
-          <label for="messageControl" class="form-label">Message</label>
-          <textarea class="form-control" id="messageControl" rows="3"></textarea>
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" rows="3" name="message" id="message"></textarea>
         </div>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" id="contactSubmitButton" onclick="submitContactForm()">Submit</button>
         </div>
       </form>
     </div>
+    <div id="contactAlert" style="padding: 8px 12px 0;"></div>
   </div>
 </div>
 

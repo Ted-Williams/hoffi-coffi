@@ -71,6 +71,11 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.coffee-card img {
+  height: 232px;
+  object-fit: cover;
+}
+
 .edit-btn {
   max-width: 60px;
   margin-left: 12px;
