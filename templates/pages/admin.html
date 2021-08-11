@@ -2,10 +2,12 @@
 
 {% block content %}
 {% include 'components/navigation.html' %}
+<!--Admin Panel-->
 <div class="container">
   <h2 class="mt-4">Admin Panel</h2>
 
   {% if added == 1 %}
+  <!--Success or failure for adding coffee-->
   <div class="alert alert-success alert-dismissible" role="addedAlert" id="addedAlert">
     <strong>Success!</strong> Coffee added.
     <button type="button" class="btn-close" data-bs-dismiss="addedAlert" aria-label="Close"></button>
@@ -18,6 +20,7 @@
   {% endif %}
 
   {% if deleted == 1 %}
+  <!--Success of failure for deleting coffee-->
   <div class="alert alert-success alert-dismissible" role="deletedAlert" id="deletedAlert">
     <strong>Success!</strong> Coffee deleted.
     <button type="button" class="btn-close" data-bs-dismiss="deletedAlert" aria-label="Close"></button>
@@ -28,7 +31,7 @@
     <button type="button" class="btn-close" data-bs-dismiss="deletedAlert" aria-label="Close"></button>
   </div>
   {% endif %}
-
+  <!--Edit area for coffee-->
   <div class="card mt-4 editArea">
     <h5 class="card-header">
       <form method="POST" action="/admin/edit-coffee" id="selectForm">
