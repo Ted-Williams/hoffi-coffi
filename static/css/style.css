@@ -80,3 +80,7 @@ body {
   max-width: 60px;
   margin-left: 12px;
 }
+
+#deleteBtn {
+  text-decoration: none;
+}
