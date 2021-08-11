@@ -11,6 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         {% if loggedIn == 1 %}
+        <!--Navigation bar-->
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="{{url_for('admin', user_id=user_id)}}">Admin</a>
           <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
