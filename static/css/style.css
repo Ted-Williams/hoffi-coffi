@@ -9,6 +9,8 @@ body {
   font-size: 1.6rem;
 }
 
+/* navbar */
+
 .navbar {
   font-size: 2rem;
 }
@@ -17,14 +19,17 @@ body {
   font-size: 2rem;
 }
 
-.login {
-  margin: 100px;
-}
-
 .navbar-collapse {
   justify-content: flex-end;
 }
 
+/* login */
+
+.login {
+  margin: 100px;
+}
+
+/* banner */
 
 .banner-image {
   object-fit: cover;
@@ -60,6 +65,8 @@ body {
   }
 }
 
+/* Coffee Card */
+
 .coffee-card {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: box-shadow 150ms ease-in;
@@ -76,6 +83,8 @@ body {
   object-fit: cover;
 }
 
+/* edit area */
+
 .editArea {
   width: 640px; 
   max-width: 100%; 
@@ -88,9 +97,13 @@ body {
   min-width: 74px;
 }
 
+/* delete */
+
 #deleteBtn {
   text-decoration: none;
 }
+
+/* contact form */
 
 #contactAlert {
   padding: 8px 12px 0;
