@@ -1,4 +1,4 @@
-![](assets/images/logo.png)
+![](static/images/logo.png)
 
 # Hoffi Coffi
 ---
