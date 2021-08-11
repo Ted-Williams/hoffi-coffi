@@ -79,6 +79,7 @@ body {
 .edit-btn {
   max-width: 60px;
   margin-left: 12px;
+  min-width: 74px;
 }
 
 #deleteBtn {
