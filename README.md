@@ -164,14 +164,40 @@ You will need to follow the steps below in order to work with a local copy.
 
     import os
     
+    os.environ.setdefault("IP", "0.0.0.0")
+
+    os.environ.setdefault("PORT", "5000")
+
+    os.environ.setdefault("DEBUG", "1")
+
     os.environ.setdefault("SECRET_KEY", "YOURSECRETKEY")
 
     os.environ.setdefault("MONGO_URI", "mongodb+srv://YOURPASSWORD@YOURCLUSTERNAME.obvuh.mongodb.net/YOURDATABASENAME?retryWrites=true&w=majority")
-    
+
     os.environ.setdefault("MONGO_DBNAME", "YOURDATABASENAME")
 
 4. Run the App
     * In the terminal type python3 app.py
+
+### Deploy to Heroku
+
+To host this project on Heroku, follow the steps below
+
+1. Creating a Heroku account 
+    * Sign up to Heroku
+    * Create a new app and select the nearest region to you
+
+2. Workspace preparation
+    * Type pip3 freeze --local > requirements.txt into the terminal to create a requirements.txt file.
+    * Type python app.py > Procfile in the terminal to create a Procfile. 
+
+3. Deployment section 
+    * In the deployment section of Heroku, choose the GitHun for automatic deployment
+    * Enter the name for your repo. Click "search". When it finds the repo, click the "connect" button.
+    * Click "settings". Scroll down and click "Reveal config vars". Set up the same variables as in your env.py (IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME): !You shouldn't set the DEBUG variable in under config vars, only in your env.py to prevent DEBUG being active on live website.
+    * Click "Deploy" and click "Enable automatic deployment".
+    * Once the app is built - Click view app. 
+    * Use git push to push to Heroku.
 
 ## Credits
 ---
