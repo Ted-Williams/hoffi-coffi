@@ -16,9 +16,9 @@ Welcome to Hoffi Coffi, thats '**Love Coffee**' in the **Welsh language**. The a
 
 * As a user, I want to be able to **learn** about a variety of coffees. 
 
-* As a user, I want to be able to **favouite** my favourite coffees from the list of products. 
+* As a user, I want to be able to **keep up to date** about my favourite coffees from the list of products. 
 
-* As a user, I want to be able to **create an account** so that I can keep a track record of my favourite coffees. 
+* As a user, I want to be able to **request** my favourite coffees be added to the site. 
 
 *Developers Goals* 
 
@@ -36,7 +36,7 @@ The logo was created using [Free Logo Maker](https://logomakr.com). It was desig
 
 The colours for the website were chosen using [Coolors](https://coolors.co/fdecfb-a97160-dfbe99). They were chosen with the aim to represent coffee and the love that goes into it. The chosen colours are:
 
-* ![#FDECFB](https://placehold.it/15/FDECFB/000000?text=+) '#FDECFB' - Pale Purple Pantone
+* ![#654321](https://placehold.it/15/FDECFB/000000?text=+) '#654321' - Dark Brown
 * ![#A97160](https://placehold.it/15/A97160/000000?text=+) '#A97160' - Blast of Bronze
 * ![#DFBE99](https://placehold.it/15/DFBE99/000000?text=+) '#DFBE99' - Tan
 
