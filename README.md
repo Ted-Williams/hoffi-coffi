@@ -36,9 +36,7 @@ The logo was created using [Free Logo Maker](https://logomakr.com). It was desig
 
 The colours for the website were chosen using [Coolors](https://coolors.co/). They were chosen with the aim to represent coffee and the love that goes into it. The chosen colours are:
 
-* ![#654321](https://coolors.co/654321) '#654321' - Dark Brown
-* ![#FF0000](https://coolors.co/FF0000) '#FF0000' - Red
-* ![#0e6b0e](https://coolors.co/0e6b0e) '#0e6b0e' - Green
+![](wireframes/hoffi-coffi-coolors.png)
 
 3. **Fonts**
 
