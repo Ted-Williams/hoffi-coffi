@@ -50,6 +50,23 @@ The wireframes for this website where created using [Balsamiq](https://balsamiq.
 ![](wireframes/tablet.png)
 ![](wireframes/phone.png)
 
+### Database Structure
+
+Key      | Value
+---------|-----------
+_id      | ObjectId
+username | String
+password | String
+
+Key           | Value
+--------------|-----------
+_id           | ObjectId
+product_name  | String
+origin        | String
+price         | String
+image_url     | String
+taste         | String
+
 ## Features
 ---
 
