@@ -34,11 +34,11 @@ The logo was created using [Free Logo Maker](https://logomakr.com). It was desig
 
 2. **Colour Scheme**
 
-The colours for the website were chosen using [Coolors](https://coolors.co/fdecfb-a97160-dfbe99). They were chosen with the aim to represent coffee and the love that goes into it. The chosen colours are:
+The colours for the website were chosen using [Coolors](https://coolors.co/). They were chosen with the aim to represent coffee and the love that goes into it. The chosen colours are:
 
 * ![#654321](https://placehold.it/15/FDECFB/000000?text=+) '#654321' - Dark Brown
-* ![#A97160](https://placehold.it/15/A97160/000000?text=+) '#A97160' - Blast of Bronze
-* ![#DFBE99](https://placehold.it/15/DFBE99/000000?text=+) '#DFBE99' - Tan
+* ![#FF0000](https://placehold.it/15/FF0000/000000?text=+) '#FF0000' - Red
+* ![#0e6b0e](https://placehold.it/15/0e6b0e/000000?text=+) '#0e6b0e' - Green
 
 3. **Fonts**
 
