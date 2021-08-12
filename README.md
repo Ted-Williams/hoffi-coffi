@@ -190,6 +190,9 @@ The features that were added to the project were designed to have a high level o
 
 **Verdict** – This test passed based on the notes in the criteria above. 
 
+## Validation
+
+**Python PEP8 Validation** - All python code was checked using an online formatter to check for PEP8 compliance. No issues were found. 
 
 ## Deployment 
 ---
