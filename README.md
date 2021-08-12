@@ -150,7 +150,7 @@ You will need to follow the steps below in order to work with a local copy.
     * Type **pip3 install -r requirements.txt** into the terminal
 
 2. Creating a database in MongoDB
-    * Create a MongoDB account [at [MongoDB](https://account.mongodb.com/)
+    * Create a MongoDB account at [MongoDB](https://account.mongodb.com/)
     * Sign in
     * Create a cluster
     * Create a database
@@ -165,7 +165,9 @@ You will need to follow the steps below in order to work with a local copy.
     import os
     
     os.environ.setdefault("SECRET_KEY", "YOURSECRETKEY")
+
     os.environ.setdefault("MONGO_URI", "mongodb+srv://YOURPASSWORD@YOURCLUSTERNAME.obvuh.mongodb.net/YOURDATABASENAME?retryWrites=true&w=majority")
+    
     os.environ.setdefault("MONGO_DBNAME", "YOURDATABASENAME")
 
 4. Run the App
