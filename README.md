@@ -121,6 +121,56 @@ The features that were added to the project were designed to have a high level o
 ## Deployment 
 ---
 
+The information below explains how to create a clone of the Hoffi Coffi repository in Github, how to work with a local copy and how to deploy to Heroku
+
+In order to clone the repository you will need the following:
+
+* Python - version 3.0
+* A Heroku account
+* A Github acoount
+* MonogoDB account
+
+### Cloning the repository
+
+To create a local respository, follow the steps below:
+
+1. Navigate to Ted-Williams/hoffi-coffi
+2. Below the menu click Code.
+3. Copy the URl using the clipboard to the righthand side.
+4. Open you preferred IDE for example Gitpod.
+5. Type git clone into the terminal and paste the respository URl.
+6. Click enter and the clone will be created.
+
+### Working with a local copy
+
+You will need to follow the steps below in order to work with a local copy.
+
+1. Install the correct requirements
+    * Go to you workspace that holds the local copy 
+    * Type **pip3 install -r requirements.txt** into the terminal
+
+2. Creating a database in MongoDB
+    * Create a MongoDB account [at [MongoDB](https://account.mongodb.com/)
+    * Sign in
+    * Create a cluster
+    * Create a database
+    * Create two collections, **Users** and **Coffee**
+    * Use the database structure above
+
+3. Setting up the Environment Variables
+    * Inside your IDE create a file called .gitignore
+    * Add the following text in the gitignore file - evn.py
+    * Create a personal secret key and password. Add the text below to your env.py file. 
+
+    import os
+    
+    os.environ.setdefault("SECRET_KEY", "YOURSECRETKEY")
+    os.environ.setdefault("MONGO_URI", "mongodb+srv://YOURPASSWORD@YOURCLUSTERNAME.obvuh.mongodb.net/YOURDATABASENAME?retryWrites=true&w=majority")
+    os.environ.setdefault("MONGO_DBNAME", "YOURDATABASENAME")
+
+4. Run the App
+    * In the terminal type python3 app.py
+
 ## Credits
 ---
 
