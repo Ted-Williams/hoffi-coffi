@@ -4,6 +4,13 @@
 {% include 'components/navigation.html' %}
 <!--Login form-->
 <div class="container mt-5">
+  {% if incorrectDetails == 1 %}
+  <!--Success or Failure message for updated coffee-->
+  <div class="alert alert-danger alert-dismissible" role="alert" id="updatedAlert">
+    Incorrect details.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endif %}
   <form action="/login" method="POST">
     <div class="mb-3">
       <label for="email" class="form-label">Email address</label>

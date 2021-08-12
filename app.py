@@ -59,10 +59,11 @@ def login():
                 global loggedInUserId
                 loggedInUserId = user["_id"]
                 return redirect(url_for("admin", user_id=user["_id"]))
+            else:
+                return render_template('pages/login.html', incorrectDetails=1)
 
         else:
-            print("Incorrect username and/or password")
-            return redirect(url_for('login'))
+            return render_template('pages/login.html', incorrectDetails=1)
 
     else:
         flash("Incorrect username and/or password")
