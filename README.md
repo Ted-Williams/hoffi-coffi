@@ -130,6 +130,65 @@ The features that were added to the project were designed to have a high level o
 
 **Verdict** – This test passed based on the notes in the criteria above. 
 
+### Contact Form
+
+**Plan** – I want the users to be able to contact the admin at hoffi coffi.
+
+**Implementation** – To use the contact form at the botom of the homepage.
+
+**Test** –  By asking friends and family to submit various test messages via the contact form to see if they were recieved. 
+
+**Result** – All messages were successfully recieved. 
+
+**Verdict** – This test passed based on the notes in the criteria above. 
+
+### Login
+
+**Plan** – I want the admin users to be able to login to the admin panel.
+
+**Implementation** – Creating admin users that only the they have access to.
+
+**Test** –  Login in using the admin users. To be taken to the admin panel
+
+**Result** – Admin were able to login successfully and enter the admin panel.
+
+**Verdict** – This test passed based on the notes in the criteria above. 
+
+### Admin Panel
+
+**Plan** – Once the Admins have logged in they should be able to access the admin file and be able to choose between either adding a coffee or editing a coffee. 
+
+**Implementation** – Adding edit and add buttons that route to the users either adding or editing a coffee.
+
+**Test** –  To login with the admin user and try to add or edit a coffee.
+
+**Result** – The admin were able to add and edit a coffee.
+
+**Verdict** – This test passed based on the notes in the criteria above. 
+
+### Admin Edit Panel
+
+**Plan** – I want the admin to be able to update or delete a coffee in/from the list.
+
+**Implementation** – Add the update and delete buttons in the admin edit panel.
+
+**Test** –  Tested by updating a current coffee and be able to delete a current coffee. 
+
+**Result** – The coffee information was presented to the user clear and readable to the users. 
+
+**Verdict** – This test passed based on the notes in the criteria above. 
+
+### Logout
+
+**Plan** – I want the admin to be able to logout.
+
+**Implementation** – Adding a logout button that routes to the homepage.
+
+**Test** –  This was tested by logging in and logging out on different pages within the app to ensure it works
+
+**Result** – Everytime the logout button was clicked it logged the admin user out and returned them to the homepage.
+
+**Verdict** – This test passed based on the notes in the criteria above. 
 
 
 ## Deployment 
