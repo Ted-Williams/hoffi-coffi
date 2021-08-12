@@ -194,7 +194,7 @@ To host this project on Heroku, follow the steps below
 3. Deployment section 
     * In the deployment section of Heroku, choose the GitHun for automatic deployment
     * Enter the name for your repo. Click "search". When it finds the repo, click the "connect" button.
-    * Click "settings". Scroll down and click "Reveal config vars". Set up the same variables as in your env.py (IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME): !You shouldn't set the DEBUG variable in under config vars, only in your env.py to prevent DEBUG being active on live website.
+    * Click "settings". Scroll down and click "Reveal config vars". Set up the same variables as in your env.py (IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME): You shouldn't set the DEBUG variable in under config vars, only in your env.py to prevent DEBUG being active on live website.
     * Click "Deploy" and click "Enable automatic deployment".
     * Once the app is built - Click view app. 
     * Use git push to push to Heroku.
@@ -202,9 +202,7 @@ To host this project on Heroku, follow the steps below
 ## Credits
 ---
 
-
-
-
+* I would like to thank [Simen Dehlin](https://github.com/Eventyret) for his continued support, help and words of encouragement throughout this project. 
 
 
 ***This project is fictitous and was created for educational purposes as part of the Code Institute Milestone Project 3***
