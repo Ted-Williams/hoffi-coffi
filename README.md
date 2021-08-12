@@ -118,6 +118,20 @@ The features that were added to the project were designed to have a high level o
 ## Testing
 ---
 
+### All Sections
+
+**Plan** – I want the app to allow the users to be able find the most update information on the top coffees from around the world.
+
+**Implementation** – Ensuring that users were able to access the information about the top coffees from around the world. The information is clear and concise as not to confuse the user.
+
+**Test** –  This was tested by asking friends and family to use the app and to see if they were able to find the information that the were looking for to educate themselves on coffee. 
+
+**Result** – The coffee information was presented to the user clear and readable to the users. 
+
+**Verdict** – This test passed based on the notes in the criteria above. 
+
+
+
 ## Deployment 
 ---
 
